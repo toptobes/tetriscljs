@@ -16,7 +16,7 @@
    :asset-path "/js"
    :modules
    {:main      ;; <- becomes `public/js/main.js`
-    {:init-fn  tetriscljs.app.core/main}}}  ;; relative to the `src/main` source path
+    {:init-fn  tetriscljs.core/main}}}  ;; relative to the `src/main` source path
 
   :test
   {:target     :node-test

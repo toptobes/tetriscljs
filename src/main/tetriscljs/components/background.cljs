@@ -1,14 +1,21 @@
-(ns tetriscljs.app.views.background)
+(ns tetriscljs.components.background)
 
-(declare left-gradient right-gradient top-gradient bottom-gradient)
+(declare background left-gradient right-gradient top-gradient bottom-gradient)
 
 (defn Background [& children]
-  [:div.background
+  [:div {:style background}
    [:div {:style left-gradient}]
    [:div {:style right-gradient}]
    [:div {:style top-gradient}]
    [:div {:style bottom-gradient}]
    children])
+
+(def background
+  {:height "100vh" :width "100vw"
+   :color "aliveclue" :background-color "#414141"
+   :background-size "40px 40px"
+   :background-image "linear-gradient(to right, rgba(128, 128, 128, .15) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(128, 128, 128, .18) 1px, transparent 1px)"})
 
 (defn gradient-str [rotation]
   (str "linear-gradient(" rotation ", #414141, transparent)"))

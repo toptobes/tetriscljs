@@ -1,11 +1,9 @@
-(ns tetriscljs.app.core
+(ns tetriscljs.core
   (:require [reagent.core :as r]
             [reagent.dom :as rdom]
-            [tetriscljs.app.views.aside :refer [Aside]]
-            [tetriscljs.app.views.counter :refer [Counter]]
-            [tetriscljs.app.views.description :refer [Description]]
-            [tetriscljs.app.views.header :refer [Header]]
-            [tetriscljs.app.views.background :refer [Background]]))
+            [tetriscljs.components.tetris.tetris-background :refer [TetrisBackground]]
+            [tetriscljs.components.tetris.bit :refer [TetrisBit]]
+            [tetriscljs.components.background :refer [Background]]))
 
 ;; --- App State ---
 
@@ -24,13 +22,8 @@
 
 (defn app []
   [Background
-   [:div.wrapper
-    [Header]
-    [Description]
-    [Aside]
-    [Counter {:count  (str @count-tracker)
-              :inc-fn #(increment! count-tracker)
-              :dec-fn #(decrement! count-tracker)}]]])
+   [TetrisBackground
+    [TetrisBit {:color "FFF"}]]])
 
 ;; --- Render App ---
 

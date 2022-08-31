@@ -1,4 +1,4 @@
-(ns tetriscljs.app.views.header)
+(ns tetriscljs.components.header)
 
 (def cljs-icon "/img/cljs.svg")
 

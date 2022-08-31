@@ -1,4 +1,4 @@
-(ns tetriscljs.app.views.aside)
+(ns tetriscljs.components.aside)
 
 (defn Aside []
   [:aside {:style {:padding-top "2rem" :font-weight "lighter" :line-height "1.4rem"}}

@@ -1,4 +1,4 @@
-(ns tetriscljs.app.views.counter)
+(ns tetriscljs.components.counter)
 
 (defn Counter [{:keys [count inc-fn dec-fn]}]
   [:div.counter  ;; `.counter` is shorthand for `{:class "counter"}`

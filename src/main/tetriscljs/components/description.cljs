@@ -1,4 +1,4 @@
-(ns tetriscljs.app.views.description)
+(ns tetriscljs.components.description)
 
 (def reagent-github-url "https://github.com/reagent-project/reagent")
 

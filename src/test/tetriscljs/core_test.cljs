@@ -1,7 +1,7 @@
-(ns tetriscljs.app.core-test
+(ns tetriscljs.core-test
   (:require [cljs.test :refer [deftest is testing]]
             [reagent.core :as r]
-            [tetriscljs.app.core :refer [incrementer! decrementer!]]))
+            [tetriscljs.core :refer [incrementer! decrementer!]]))
 
 ;; Basic unit tests of `incrementer!` and `decrementer!` utility functions
 
