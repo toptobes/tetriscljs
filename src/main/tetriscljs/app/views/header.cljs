@@ -8,4 +8,4 @@
    [:h1 {:style {:padding "1rem", :font-weight "bold"}}
     [:span {:style {:text-decoration "line-through"}}
      "Create Reagent App"]
-    "Tetris soon, I swear"]])
+    "Tetris soon"]])
