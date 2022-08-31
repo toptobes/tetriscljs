@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: org.graalvm.js/js-scriptengine:20.1.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/js/js-scriptengine/20.1.0/js-scriptengine-20.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

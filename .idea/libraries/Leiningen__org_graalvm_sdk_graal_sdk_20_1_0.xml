@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: org.graalvm.sdk/graal-sdk:20.1.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/sdk/graal-sdk/20.1.0/graal-sdk-20.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
