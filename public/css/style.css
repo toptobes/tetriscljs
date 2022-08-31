@@ -32,7 +32,8 @@ body {
 .background {
   height: 100vh;
   width: 100vw;
-  background-color: cadetblue;
+  background-color: #414141;
+  color: aliceblue;
 }
 
 /* App */
@@ -83,4 +84,12 @@ button:focus {
   text-align: center;
   width: 12rem;
   height: 8rem;
+}
+
+a:link {
+  color: #00d0ff;
+}
+
+a:visited {
+  color: cadetblue;
 }
