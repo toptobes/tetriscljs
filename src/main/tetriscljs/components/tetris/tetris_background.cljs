@@ -12,7 +12,6 @@
    :height "95%"
    :aspect-ratio "1/2"
    :border-radius "20px"
-   :padding "10px"
    :position "absolute"
    :top "50%"
    :left "50%"

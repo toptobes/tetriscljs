@@ -10,5 +10,5 @@
    :aspect-ratio "1/1"
    :background-color color
    :position "absolute"
-   :left (str "calc(10% * " x ")")
-   :top (str "calc(5% * " y ")")})
+   :left (str "calc(10% * " x " + 5%)")
+   :top (str "calc(5% * " y " + 2.5%)")})

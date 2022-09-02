@@ -4,35 +4,32 @@
             [tetriscljs.components.tetris.tetris-background :refer [TetrisBackground]]
             [tetriscljs.components.tetris.bit :refer [TetrisBit]]
             [tetriscljs.components.background :refer [Background]]
-            [tetriscljs.state :refer [state board-cursor]]
             [tetriscljs.board-logic :refer [board-at board-add]]
             [tetriscljs.pieces :as pieces]))
 
 ;; --- App State ---
 
 ;; Use `defonce` to preserve atom value across hot reloads
-(defonce count-tracker (r/atom 0))
+(def board
+  (r/atom
+    (into {} (for [x (range 9)
+                   y (range 19)]
+           [{:x x :y y} {:color "#000" :floating false}]))))
 
 ;; --- Utility Functions ---
 
-(defn increment! [r]
-  (swap! r inc))
-
-(defn decrement! [r]
-  (swap! r dec))
-
 ;; --- App Component ---
 (defn app []
-  (prn @board-cursor)
+  (prn @board)
 
-  (reset! state (board-add @board-cursor (pieces/O-block) 2 2 "#FFF"))
+  (reset! board (board-add @board (pieces/O-block) 2 2 "#FFF"))
 
   [Background
    [TetrisBackground
-    (for [x (range 18)
-          y (range 9)
-          :let [piece (board-at @board-cursor x y)]]
-      [TetrisBit {:color (:color piece) :x x :y y}])]])
+      (for [segment @board
+            :let [coords (first segment)]
+            :let [props (second segment)]]
+        [TetrisBit {:color (:color props) :x (:x coords) :y (:y coords)}])]])
 
 ;; --- Render App ---
 
