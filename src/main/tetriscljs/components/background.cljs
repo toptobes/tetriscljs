@@ -1,6 +1,6 @@
 (ns tetriscljs.components.background)
 
-(declare background left-gradient right-gradient top-gradient bottom-gradient)
+(declare background background-gradient left-gradient right-gradient top-gradient bottom-gradient)
 
 (defn Background [& children]
   [:div {:style background}
@@ -8,6 +8,7 @@
    [:div {:style right-gradient}]
    [:div {:style top-gradient}]
    [:div {:style bottom-gradient}]
+   [:div {:style background-gradient}]
    children])
 
 (def background
@@ -16,6 +17,11 @@
    :background-size "40px 40px"
    :background-image "linear-gradient(to right, rgba(128, 128, 128, .15) 1px, transparent 1px),
                       linear-gradient(to bottom, rgba(128, 128, 128, .18) 1px, transparent 1px)"})
+
+(def background-gradient
+  {:height "100vh" :width "100vw"
+   :position "absolute"
+   :background-image "linear-gradient(to top, rgba(0, 0, 0, .35), transparent)"})
 
 (defn gradient-str [rotation]
   (str "linear-gradient(" rotation ", #414141, transparent)"))
