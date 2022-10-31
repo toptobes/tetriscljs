@@ -4,7 +4,7 @@
             [tetriscljs.components.tetris.tetris-background :refer [TetrisBackground]]
             [tetriscljs.components.tetris.bit :refer [TetrisBit]]
             [tetriscljs.components.background :refer [Background]]
-            [tetriscljs.board-logic :refer [board-at board-add]]
+            [tetriscljs.board-logic :refer [board-at board-add board-move-floating-down board-remove-floating]]
             [tetriscljs.pieces :as pieces]))
 
 ;; --- App State ---
@@ -23,6 +23,8 @@
   (prn @board)
 
   (reset! board (board-add @board (pieces/O-block) 2 2 "#FFF"))
+  (reset! board (board-move-floating-down @board))
+  (reset! board (board-move-floating-down @board))
 
   [Background
    [TetrisBackground
